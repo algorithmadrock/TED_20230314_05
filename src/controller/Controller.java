@@ -6,25 +6,28 @@ DATA        : 14/03/2023
 
 package controller;
 
-import br.edu.fateczl.ordenacao.BubbleSort;
-import br.edu.fateczl.ordenacao.MergeSort;
+import br.edu.fateczl.ordenacao.Sorts;
 
 public class Controller {
 	public Controller() {
 		super();
 	}
 
-	public void ordem(int[] vetor, int tamanho) {
-		BubbleSort bubblesort = new BubbleSort();
-		MergeSort mergesort = new MergeSort();
+	public void Bubble(int[] vetor, int tamanho) {
+		Sorts sorts = new Sorts();
 
-		int[] bubble = bubblesort.main(vetor, tamanho);
-		int[] merge = mergesort.main(vetor, tamanho);
+		int[] bubble = sorts.Bubble(vetor);
 
 		System.out.println("BUBBLE: ");
 		for (int i = 0; i < tamanho; i++) {
 			System.out.print(bubble[i] + " ");
 		}
+	}
+
+	public void Merge(int[] vetor, int tamanho) {
+		Sorts sorts = new Sorts();
+
+		int[] merge = sorts.Merge(vetor);
 
 		System.out.println("\nMERGE: ");
 		for (int i = 0; i < tamanho; i++) {
